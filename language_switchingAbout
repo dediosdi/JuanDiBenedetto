@@ -1,0 +1,40 @@
+// language_switchingAbout.js
+
+// Select the language flags
+const esFlag = document.getElementById("es-flag");
+const enFlag = document.getElementById("en-flag");
+
+// Select the elements to be changed
+const aboutTitle = document.querySelector("h2");
+const aboutText = document.querySelector(".about-text p");
+
+// Define content for both languages
+const content = {
+  es: {
+    aboutTitle: "Quien Soy",
+    aboutText: `¡Hola! Soy Juan, un desarrollador apasionado por la programación y la tecnología, actualmente cursando la carrera de Sistemas en la Universidad Nacional de La Plata (UNLP). Mi objetivo es seguir aprendiendo y perfeccionándome en el desarrollo de software, con un enfoque particular en el front-end.
+    
+    A lo largo de mi carrera, he trabajado en proyectos que me han permitido adquirir habilidades en tecnologías como HTML, CSS, JavaScript y frameworks como React -entre otras tecnologías-. Me encanta crear interfaces atractivas, funcionales y fáciles de usar. También tengo experiencia en programación orientada a objetos, desarrollo de clases y manejo de datos, lo que me ha permitido tener una comprensión sólida de la arquitectura del software.
+    
+    Si tenes alguna idea o proyecto en mente, no dudes en contactarme!`
+  },
+  en: {
+    aboutTitle: "Who I Am",
+    aboutText: `Hi! I'm Juan, a developer passionate about programming and technology, currently studying Systems Engineering at the National University of La Plata (UNLP). My goal is to keep learning and improving my software development skills, with a particular focus on front-end development.
+    
+    Throughout my career, I have worked on projects that have allowed me to acquire skills in technologies such as HTML, CSS, JavaScript, and frameworks like React - among other technologies. I love creating attractive, functional, and user-friendly interfaces. I also have experience in object-oriented programming, class development, and data management, which has given me a solid understanding of software architecture.
+    
+    If you have any ideas or projects in mind, feel free to contact me!`
+  }
+};
+
+// Switch content when flags are clicked
+esFlag.addEventListener("click", () => {
+  aboutTitle.textContent = content.es.aboutTitle;
+  aboutText.textContent = content.es.aboutText;
+});
+
+enFlag.addEventListener("click", () => {
+  aboutTitle.textContent = content.en.aboutTitle;
+  aboutText.textContent = content.en.aboutText;
+});

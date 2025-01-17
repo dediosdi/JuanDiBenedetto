@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,35 +7,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>About</title>
+    <title>Juan Di Benedetto</title>
 </head>
 <body>
-     <header>
-        <h1>JUAN DI BENEDETTO</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1><a href="index.html" style="text-decoration: none; color: inherit;">JUAN DI BENEDETTO</a></h1>
+    <div class="language-switcher">
+        <span id="es-flag" class="flag" style="cursor: pointer;">🇪🇸</span>
+        <span id="en-flag" class="flag" style="cursor: pointer;">🇺🇸</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Acerca</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section id="skills">
-        <h2>About Me</h2>
-        <div class="skills-container">
-            <!-- Skill icons go here -->
-        </div>
+        <h2 id="skills-title">Acerca de mi</h2>
+      
     </section>
-
+    
 
     <section id="about">
-        <h2>Who I am</h2>
+        <h2>Quien Soy</h2>
         <div class="about-container">
             <div class="about-text">
-                <p>Hello! I'm a dedicated Front-end Developer with a knack for turning complex ideas into intuitive, user-friendly designs. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating responsive and accessible websites that not only look great but perform seamlessly across all devices.</p>
-                <p>My journey in web development has been fueled by a passion for continuous learning and staying updated with the latest technologies. Whether it's mastering frameworks like React or diving into advanced CSS techniques, I thrive on challenges that push my skills to the next level.</p>
-                <p>When I'm not coding, you'll find me exploring design trends, contributing to open-source projects, or engaging with the developer community. I believe in the power of collaboration and am always open to connecting with like-minded professionals.</p>
+                <p>¡Hola! Soy Juan, un desarrollador apasionado por la programación y la tecnología, actualmente cursando la carrera de Sistemas en la Universidad Nacional de La Plata (UNLP). Mi objetivo es seguir aprendiendo y perfeccionándome en el desarrollo de software, con un enfoque particular en el front-end.
+
+                    A lo largo de mi carrera, he trabajado en proyectos que me han permitido adquirir habilidades en tecnologías como HTML, CSS, JavaScript y frameworks como React -entre otras tecnologías-. Me encanta crear interfaces atractivas, funcionales y fáciles de usar. También tengo experiencia en programación orientada a objetos, desarrollo de clases y manejo de datos, lo que me ha permitido tener una comprensión sólida de la arquitectura del software.
+                    
+                    Si tenes alguna idea o proyecto en mente, no dudes en contactarme!
             </div>
             <div class="about-image">
                 <img src="images/1734667450016.jpeg" alt="About Me">
@@ -51,11 +55,24 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+        <div class="footer-container">
+            <img src="images/signature.png" alt="Logo">
+          <p>&copy; 2025 Juan Di Benedetto | Todos los derechos reservados.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/juan-di-benedetto/" target="_blank" title="LinkedIn">
+              <img src="images/icons/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/dediosdi" target="_blank" title="GitHub">
+              <img src="images/icons/git.png" alt="GitHub">
+            </a>
+            <a href="mailto:juandidb@gmail.com" target="_blank" title="Email">
+              <img src="images/icons/email.png" alt="Email">
+            </a>
+          </div>
         </div>
-    </footer>
+      </footer>
+      <script src="language_switchingAbout"></script>
+
+      
 </body>
 </html>

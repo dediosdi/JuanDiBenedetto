@@ -470,20 +470,22 @@ html {
   }
 
   /* Footer */
-footer {
+  footer {
+    text-align: center; /* Centra todo el contenido dentro del footer */
+    color: white;
+    padding: 20px 0; /* Agrega espacio arriba y abajo del footer */
     background-color: #1f1f1f;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
   }
-
-
   
   .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center; /* Centra todos los elementos dentro del contenedor */
+  }
+  
+  footer img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción de la imagen */
   }
   
   footer p {
