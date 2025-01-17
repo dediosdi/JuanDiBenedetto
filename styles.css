@@ -1,0 +1,633 @@
+.lilita-one-regular {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Aileron Light'; 
+    src: url('fonts/aileron_0102/Aileron-Light.otf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Aileron Regular'; 
+    src: url('fonts/aileron_0102/Aileron-Regular.otf') format('truetype'); 
+}
+@font-face {
+    font-family: 'Aileron Black'; 
+    src: url('fonts/aileron_0102/Aileron-Black.otf') format('truetype'); 
+}
+@font-face {
+    font-family: 'Aileron Bold'; 
+    src: url('fonts/aileron_0102/Aileron-Bold.otf') format('truetype'); 
+}
+
+
+body {
+   background-image: url('images/1.jpg'); /* Imagen de fondo */
+
+}
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: Aileron Bold;
+}
+
+header h1 {
+    font-size: 1.5em;
+    font-family: Lilita One;
+    color: white;
+    transition: color 0.5s ease; /* La transición dura 0.5 segundos y tiene un efecto más suave */
+}
+
+header h1:hover {
+    color: firebrick; /* Cambia el color del texto al pasar el cursor */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Posición debajo del texto */
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background-color: lawngreen; /* Color de la línea */
+    transition: width 0.3s ease-in-out; /* Transición suave */
+}
+
+header nav ul li a:hover::after {
+    width: 100%; /* La línea se extiende completamente */
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    color: white;
+}
+
+.hero-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+
+
+
+.hero-text h1 {
+    margin-bottom: 20px;
+    font-family: Aileron Black;
+    font-size: 3em;
+    transition: color 0.5s ease; /* La transición dura 0.5 segundos y tiene un efecto más suave */
+
+}
+
+.hero-text h1:hover {
+    color: firebrick; /* Cambia el color del texto al pasar el cursor */
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+    font-family: Aileron Light;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+}
+.hero-buttons .contact-button {
+    background-color: lawngreen;
+    padding: 10px 30px 10px 20px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.hero-buttons .contact-button::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Centrado verticalmente */
+    right: 12px; /* Alineado a la derecha del botón */
+    width: 10px; /* Tamaño del círculo */
+    height: 10px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hace que sea redondo */
+    background-color: white; /* Color inicial del círculo */
+    transform: translateY(-50%); /* Centrado verticalmente en el medio del botón */
+    transition: background-color 0.3s ease-in-out; /* Transición suave para el cambio de color */
+}
+
+.hero-buttons .contact-button:hover::after {
+    background-color: firebrick; /* Color del círculo al pasar el cursor */
+}
+
+
+.hero-buttons .linkedin-button,
+.hero-buttons .github-button {
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Ajusta el tamaño del botón */
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 0; /* Elimina el padding para que el logo ocupe todo */
+    overflow: hidden; /* Asegura que el logo no salga del botón */
+}
+
+.hero-buttons .linkedin-button img {
+    width: 100%; /* El logo ocupará toda la sección del botón */
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que se vea completa dentro del botón */
+    transition: filter 0.3s ease-in-out; /* Transición suave al cambiar el color */
+}
+
+.hero-buttons .linkedin-button:hover img {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(88%) saturate(3079%) hue-rotate(202deg) brightness(95%) contrast(92%);
+}
+.hero-buttons .github-button img {
+    width: 100%; /* El logo ocupará toda la sección del botón */
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que se vea completa dentro del botón */
+    transition: filter 0.3s ease-in-out; /* Transición suave al cambiar el color */
+}
+
+.hero-buttons .github-button:hover img {
+    filter: invert(1);
+}
+
+.hero-photo {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;  /* Asegura que nada se salga de la imagen */
+}
+
+.hero-photo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Transición suave */
+    transform-origin: center; /* El centro de la imagen es el punto de giro */
+}
+
+/* Efecto de rotación de la imagen alrededor de su centro */
+.hero-photo img:hover {
+    animation: rotateAroundCenter 3s ease forwards; /* Animación de rotación infinita */
+}
+
+/* Animación que hace que los bordes giren alrededor del centro */
+@keyframes rotateAroundCenter {
+    0% {
+        transform: rotate(0deg); /* Inicio sin rotación */
+    }
+    100% {
+        transform: rotate(360deg); /* 360 grados de rotación completa */
+    }
+}
+
+
+
+
+/* Estilo para el botón hacia abajo */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-button {
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    bottom: 10%;
+    left: 50%;
+    position: absolute;
+
+}
+
+.scroll-button img {
+    width: 50px;
+    height: auto;
+}
+
+.scroll-button:hover {
+    transform: translateY(10px);
+}
+
+
+
+
+
+
+
+
+
+/* Sección Index */
+#home {
+    /* Asegúrate de que no haya conflictos con otras secciones */
+    position: relative;
+    z-index: 1;
+}
+
+/* Sección Featured Projects */
+#featured-projects {
+    color: white;
+    text-align: center;
+    margin-top: 150px; /* Espacio adicional para separarla de la sección Index */
+    position: relative; /* Asegura que la posición no se vea afectada por otras secciones */
+    z-index: 0;
+}
+
+/* Título de la sección */
+#featured-projects h2 {
+    font-family: Aileron Black;
+    font-size: 2.5em;
+}
+
+
+#featured-projects p {
+    font-family: Aileron Light;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de los proyectos */
+.projects {
+    display: flex;
+    flex-direction: column; /* Cada proyecto en una fila */
+    gap: 30px; /* Espacio entre proyectos */
+    align-items: center;  /* Esto ya está bien, asegura que los proyectos se alineen al centro horizontalmente */
+    justify-content: center; /* Asegura que los proyectos se centren dentro del contenedor */
+}
+
+/* Contenido de cada proyecto */
+.project {
+    display: flex; /* Flexbox para dividir en dos columnas */
+    flex-direction: row; /* Elementos uno al lado del otro */
+    align-items: center; /* Centrar verticalmente */
+    gap: 20px; /* Espacio entre la carta y el texto */
+    max-width: 1000px; /* Ancho máximo del proyecto */
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Esto centra el proyecto en su contenedor */
+    
+}
+
+
+/* Efecto hover */
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Carta del proyecto (lado izquierdo) */
+.project-card {
+    width: 500px; /* Ancho mayor para la captura de pantalla */
+    height: 300px; /* Alto mayor para la captura */
+    background-color: #444444; /* Fondo gris para la imagen */
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px; /* Agregar un poco de espacio para que el fondo gris sea visible */
+}
+
+/* Imagen de la carta (captura de pantalla) */
+.project-card img {
+    max-width: 100%; /* La imagen no debe exceder el tamaño del contenedor */
+    max-height: 100%; /* Limita la altura para evitar que la imagen se desborde */
+    object-fit: contain; /* La imagen se ajusta al contenedor sin deformarse */
+    border-radius: 10px;
+
+}
+
+/* Texto del proyecto (lado derecho) */
+.project-text {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column; /* Título arriba, descripción abajo */
+    justify-content: center; /* Centrar vertical */
+    text-align: left;
+    background-color: transparent; /* Sin fondo para la descripción */
+    color: #fff; /* Texto blanco o el color que prefieras */
+}
+
+.project-text h3 {
+    font-family: Aileron Black;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.project-text p {
+    font-family: Aileron Light;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.project-info {
+    margin-top: -30px;
+}
+
+.info-bar {
+    border-top: 1px solid #ccc; /* Color y grosor de la línea */
+    padding: 5px 0;
+    font-family: 'Aileron Light', sans-serif;
+    font-size: 0.9em;
+    color: #ddd; /* Color del texto */
+}
+
+.project-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px; /* Espaciado entre botones */
+}
+
+.project-buttons .button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Aileron Bold;
+    font-size: 14px;
+    color: white;
+    background-color: firebrick;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.project-buttons .button:hover {
+    background-color: lawngreen;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+.project-buttons .github-button {
+    background-color: black;
+}
+
+.project-buttons .github-button:hover {
+    background-color: gray;
+}
+
+
+
+
+#skills {
+    color: white;
+    font-family: Aileron BLack;
+    font-size: 1.7em;
+    padding: 40px;
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+  }
+  
+  .skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: filter 0.3s ease; /* Transición suave para el cambio */
+  }
+  
+  /* Efecto de inversión de color */
+  .skill img.invert {
+    filter: invert(1); /* Invierte los colores del icono */
+  }
+  
+  .skill-info {
+    width: 100%;
+  }
+  
+  .skill-info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+
+#knowme{
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Aileron Regular;    
+    text-decoration: underline;
+  }
+
+  /* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  footer p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .social-links {
+    margin-top: 15px;
+  }
+  
+  .social-links a {
+    margin: 0 15px;
+    display: inline-block;
+  }
+  
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.1);
+  }
+  
+ 
+
+
+
+
+
+
+
+
+
+
+  /* General Section Styling */
+#about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-family: Aileron Black;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* About Text */
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* About Image */
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+#game {
+    padding: 50px 20px;
+    background-color: #eef2f3;
+    text-align: center;
+}
+
+#game h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.game-container {
+    margin: 20px auto;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#click-button {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#click-button:hover {
+    background-color: #0056b3;
+}
+
+#score, #timer {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 10px 0;
+}
