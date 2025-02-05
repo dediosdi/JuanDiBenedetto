@@ -37,3 +37,15 @@ document.getElementById("scroll-button").addEventListener("click", function() {
             });
     });
 </script>
+
+
+gsap.to(".elemento", {
+    scrollTrigger: {
+      trigger: ".elemento",
+      start: "top 80%", // La animación comienza cuando la parte superior del .elemento está en el 80% del viewport
+      end: "bottom 20%", // Termina cuando la parte inferior del .elemento está en el 20% del viewport
+      scrub: true // La animación está sincronizada con el desplazamiento
+    },
+    opacity: 1, // Cambia la opacidad
+    y: 0 // Mueve el elemento en el eje y
+  });

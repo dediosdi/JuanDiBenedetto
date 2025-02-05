@@ -24,8 +24,7 @@
 
 
 body {
-   background-image: url('images/1.jpg'); /* Imagen de fondo */
-
+background-color: #121212/*  */;
 }
 header {
     color: white;
@@ -86,18 +85,25 @@ header nav ul li a:hover::after {
     align-items: center;
     padding: 50px;
     color: white;
+    height: 100vh; /* Hace que ocupe toda la altura de la pantalla */
+}
+
+.hero-photo{
+    bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-text {
     flex: 1;
-    margin-right: 20px;
+    margin-bottom: 300px;
 }
 
 
 
 
 .hero-text h1 {
-    margin-bottom: 20px;
     font-family: Aileron Black;
     font-size: 3em;
     transition: color 0.5s ease; /* La transición dura 0.5 segundos y tiene un efecto más suave */
@@ -257,14 +263,18 @@ html {
     position: relative;
     z-index: 1;
 }
-
+#projects{
+    color: white;
+    text-align: center;
+    position: relative; /* Asegura que la posición no se vea afectada por otras secciones */
+    bottom: 100px;
+    display: grid;
+    gap: 20px; /* Espacio entre filas y columnas */}
 /* Sección Featured Projects */
 #featured-projects {
     color: white;
     text-align: center;
-    margin-top: 150px; /* Espacio adicional para separarla de la sección Index */
     position: relative; /* Asegura que la posición no se vea afectada por otras secciones */
-    z-index: 0;
 }
 
 /* Título de la sección */
@@ -469,29 +479,95 @@ html {
     text-decoration: underline;
   }
 
-  /* Footer */
-  footer {
-    text-align: center; /* Centra todo el contenido dentro del footer */
-    color: white;
-    padding: 20px 0; /* Agrega espacio arriba y abajo del footer */
-    background-color: #1f1f1f;
+/* Estilos generales */
+/* Estilos generales */
+.footer {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Líneas divisorias */
+.footer-horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 0.5rem 0;
+}
+
+/* Navegación */
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Derechos reservados */
+.footer-rights p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #888;
+  margin: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-rights p:hover {
+  color: #fff;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .footer-container {
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en columna */
-    align-items: center; /* Centra todos los elementos dentro del contenedor */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  footer img {
-    max-width: 100%; /* Asegura que la imagen no se desborde */
-    height: auto; /* Mantiene la proporción de la imagen */
-  }
-  
-  footer p {
-    margin: 10px 0;
-    font-size: 16px;
-  }
+}
+
+.footer-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
   
   .social-links {
     margin-top: 15px;
